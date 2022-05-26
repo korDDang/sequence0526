@@ -29,7 +29,7 @@ function check() {
 <%@ include file="header.jsp" %>
 <%@ include file="nav.jsp" %>
 <%@ include file="DBConn.jsp"%>
-<section>
+<section id="sec1">
 <% 
 ResultSet rs=null;
 PreparedStatement pstmt=null;
@@ -73,7 +73,7 @@ try{
 </tr>
 <tr>
 <th>직급</th>
-<td><select name="position">
+<td><select name="position" >
 <option value="1" <%if(position.equals("1")){%>selected<%} %>>1급</option>
 <option value="2" <%if(position.equals("2")){%>selected<%} %>>2급</option>
 <option value="3" <%if(position.equals("3")){%>selected<%} %>>3급</option>
@@ -91,7 +91,7 @@ try{
 </tr>
 <tr>
 <td>
-<td>
+<td id="tdbt">
 <input type="button" value="등록" onclick="check()">
 <input type="reset" value="취소">
 </td>
